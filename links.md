@@ -14,3 +14,6 @@ Full project: collect data, train, compare, optimize, Android app
 
 ### [Training road scene segmentation on Cityscapes with Supervisely, Tensorflow and UNet](https://medium.com/towards-data-science/training-road-scene-segmentation-on-cityscapes-with-supervisely-tensorflow-and-unet-1232314781a8)
 Introduction to [Supervise.ly](https://supervise.ly)
+
+### [TensorFlow for Poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/index.html)
+### [TensorFlow for Poets for Mobile](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2/)
