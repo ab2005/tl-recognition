@@ -6,8 +6,11 @@
 - [train your own detection+recognition](https://medium.com/@anthony_sarkis/self-driving-cars-implementing-real-time-traffic-light-detection-and-classification-in-2017-7d9ae8df1c58)
 - [label+annotate+train](https://medium.com/@Vatsal410/traffic-light-detection-tensorflow-api-c75fdbadac62)
 - [nexar challenge #1](https://medium.freecodecamp.org/recognizing-traffic-lights-with-deep-learning-23dae23287cc) This is a classifier, no bounding boxes!
-<br>Nexar provided 18,659 labeled images as training data. Each image was labeled with one of the three classes mentioned above (no traffic light / red / green). The final classifier achieved an accuracy of 94.955% on Nexar’s test set, with a model size of ~7.84 MB
+<br>Nexar provided 18,659 labeled images as training data. Each image was labeled with one of the three classes mentioned above (no traffic light / red / green). The final classifier achieved an accuracy of 94.955% on Nexar’s test set, with a model size of ~7.84 MB. [Github](https://github.com/davidbrai/deep-learning-traffic-lights) 
 
 
 ### [Building an insanely fast image classifier on Android with MobileNets in TensorFlow](https://hackernoon.com/building-an-insanely-fast-image-classifier-on-android-with-mobilenets-in-tensorflow-dc3e0c4410d4) 
 Full project: collect data, train, compare, optimize, Android app
+
+### [Training road scene segmentation on Cityscapes with Supervisely, Tensorflow and UNet](https://medium.com/towards-data-science/training-road-scene-segmentation-on-cityscapes-with-supervisely-tensorflow-and-unet-1232314781a8)
+Introduction to [Supervise.ly](https://supervise.ly)
