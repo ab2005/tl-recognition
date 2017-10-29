@@ -18,3 +18,14 @@ Introduction to [Supervise.ly](https://supervise.ly)
 
 ### [TensorFlow for Poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/index.html)
 ### [TensorFlow for Poets for Mobile](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2/)
+
+
+https://github.com/random-forests/tensorflow-workshop/blob/master/examples/04_canned_estimators.ipynb
+
+READ! 
+[Understanding DNN](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/)
+http://colah.github.io/posts/2014-07-Conv-Nets-Modular/
+http://colah.github.io/posts/2014-07-Understanding-Convolutions/
+
+WATCH!
+http://goo.gl/KewA03
