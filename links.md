@@ -28,8 +28,9 @@ http://colah.github.io/posts/2014-07-Conv-Nets-Modular/
 http://colah.github.io/posts/2014-07-Understanding-Convolutions/
 
 WATCH!
-http://goo.gl/KewA03
-http://cs231n.stanford.edu/
+- [Recepies](http://goo.gl/KewA03)
+- [Stanford class](http://cs231n.stanford.edu/)
 
-TensowFlow cource:
-https://web.stanford.edu/class/cs20si/
+[Stanford TensowFlow course](https://web.stanford.edu/class/cs20si/)
+[github](https://github.com/chiphuyen/stanford-tensorflow-tutorials)
+[syllabus](https://web.stanford.edu/class/cs20si/syllabus.html)
