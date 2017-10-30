@@ -29,3 +29,7 @@ http://colah.github.io/posts/2014-07-Understanding-Convolutions/
 
 WATCH!
 http://goo.gl/KewA03
+http://cs231n.stanford.edu/
+
+TensowFlow cource:
+https://web.stanford.edu/class/cs20si/
