@@ -8,7 +8,7 @@ MIN_HEIGHT=2
 MAX_HEIGHT=400
 
 lines = []
-for file in glob.glob('*/train*.txt'):
+for file in glob.glob('/data/traffic_lights/*/train*.txt'):
     with open(file) as f:
         lines.extend(f.read().splitlines())
 
