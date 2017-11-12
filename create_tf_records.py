@@ -110,6 +110,8 @@ def create_tf_record(record_filename, examples):
 
     counter = 1
     len_examples = len(examples)
+    step = len_examples / 100
+    i = 1
     for example in examples:
         try:
             tf_example = create_tf_example(example)
@@ -117,8 +119,9 @@ def create_tf_record(record_filename, examples):
         except ValueError as err:
             print(err.args)
 
-        if counter % 100 == 0:
-            print("Percent done", int((counter / len_examples) * 100))
+        if counter > step:
+            print("Percent done", i)
+            i += 1
         counter += 1
 
     writer.close()
@@ -142,17 +145,17 @@ def main(_):
     num_train = int(0.7 * len_examples)
     train_examples = examples[:num_train]
     val_examples = examples[num_train:]
-    tf.logging.info('%d training and %d validation examples.', len(train_examples), len(val_examples))
+    print('%d training and %d validation examples.', len(train_examples), len(val_examples))
 
-    tf.logging.info('Creating training record...')
+    print('Creating training record...')
     create_tf_record(train_output_path, train_examples)
-    tf.logging.info('Creating validation record...')
+    print('Creating validation record...')
     create_tf_record(val_output_path, val_examples)
 
 if __name__ == '__main__':
     flags = tf.app.flags
-    flags.DEFINE_string('input_examples', '', 'Path to examples')
-    flags.DEFINE_string('output_dir', '', 'Path to output TFRecord')
+    flags.DEFINE_string('input_examples', '/data/traffic_lights/*/train*.txt', 'Path to examples')
+    flags.DEFINE_string('output_dir', './tf_records', 'Path to output TFRecord')
     FLAGS = flags.FLAGS
 
     tf.app.run()
