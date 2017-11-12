@@ -38,9 +38,8 @@ def create_tf_example(example, MIN_WIDTH=2, MAX_WIDTH=200, MIN_HEIGHT=2, MAX_HEI
         encoded_image = fid.read()
 
     format = path.split('.')[-1]
-    image_format = path.split('.')[-1].encode()
+    image_format = format.encode()
     enc_path = path.encode()
-    print(width, 'x', height, '', format)
 
     xmins = []  # List of normalized left x coordinates in bounding box (1 per box)
     xmaxs = []  # List of normalized right x coordinates in bounding box
