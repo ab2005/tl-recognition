@@ -109,7 +109,7 @@ def get_all_labels(annotation='*/train*.txt'):
 def create_tf_record(record_filename, examples):
     writer = tf.python_io.TFRecordWriter(record_filename)
 
-    counter = 0
+    counter = 1
     len_examples = len(examples)
     for example in examples:
         try:
@@ -132,7 +132,7 @@ def main(_):
     val_output_path = os.path.join(dir, 'val.record')
 
     examples = get_all_labels(FLAGS.input_examples)
-    examples = examples[:10]  # for testing
+    #examples = examples[:10]  # for testing
     len_examples = len(examples)
     print("Loaded ", len(examples), "examples")
 
