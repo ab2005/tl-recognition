@@ -19,8 +19,7 @@ Introduction to [Supervise.ly](https://supervise.ly)
 ### [Training object detection with Tensorflow](https://medium.freecodecamp.org/tracking-the-millenium-falcon-with-tensorflow-c8c86419225e)
 A complete guide how to create your own object detector. 200–300 examples of each object is enough. There are plenty of annotation tools out there, such as labelImg and RectLabel. I used RectLabel, but it’s only for macOS. It’s still a lot of work, trust me. It took me about three or four hours of nonstop work to annotate my entire dataset.   
 
-### Convert coco dataset to tfrecord for the tensorflow detection API.
-[tensorflow_object_detection_create_coco_tfrecord](https://github.com/MetaPeak/tensorflow_object_detection_create_coco_tfrecord)
+### [Convert coco dataset to tfrecord for the tensorflow detection API].(https://github.com/MetaPeak/tensorflow_object_detection_create_coco_tfrecord)
 ### [TensorFlow for Poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/index.html)
 ### [TensorFlow for Poets for Mobile](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets-2/)
 
