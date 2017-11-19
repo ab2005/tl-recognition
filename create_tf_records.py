@@ -57,6 +57,7 @@ def create_tf_example(example, MIN_WIDTH=2, MAX_WIDTH=200, MIN_HEIGHT=2, MAX_HEI
         y_min = int(ss[n + 1])
         x_max = int(ss[n + 2])
         y_max = int(ss[n + 3])
+
         if x_min >= x_max:
             x_min, x_max = x_max, x_min
         if y_min >= y_max:
@@ -64,6 +65,12 @@ def create_tf_example(example, MIN_WIDTH=2, MAX_WIDTH=200, MIN_HEIGHT=2, MAX_HEI
 
         width = x_max - x_min
         height = y_max - y_min
+
+        if x_max >= width:
+            x_max = width - 1
+        if y_max > height:
+            y_max = height - 1
+
         if width < MIN_WIDTH:
             raise ValueError('Box width smaller than min (' + str(width) + 'x' + str(height) + ') at ' + example)
         if width > MAX_WIDTH:
@@ -122,18 +129,21 @@ def create_tf_record(record_filename, examples):
         if counter > step:
             print("Percent done", i)
             i += 1
-        counter += 1
+            counter = 0
+        else:
+            counter += 1
 
     writer.close()
 
 def main(_):
-    dir = FLAGS.output_dir
+    dir = 'tf_records_'+FLAGS.set
     if not os.path.exists(dir):
         os.makedirs(dir)
     train_output_path = os.path.join(dir, 'train.record')
     val_output_path = os.path.join(dir, 'val.record')
-
-    examples = get_all_labels(FLAGS.input_examples)
+    path = '/data/traffic_lights/{}/train*.txt'.format(FLAGS.set)
+    print('using annotatilns from', path)	
+    examples = get_all_labels(path)
     #examples = examples[:10]  # for testing
     len_examples = len(examples)
     print("Loaded ", len(examples), "examples")
@@ -154,8 +164,10 @@ def main(_):
 
 if __name__ == '__main__':
     flags = tf.app.flags
-    flags.DEFINE_string('input_examples', '/data/traffic_lights/*/train*.txt', 'Path to examples')
-    flags.DEFINE_string('output_dir', './tf_records', 'Path to output TFRecord')
+    flags.DEFINE_string('set','','')
+#    flags.DEFINE_string('input_examples', '/data/traffic_lights/*/train*.txt', 'Path to examples')
+#    flags.DEFINE_string('output_dir', './tf_records', 'Path to output TFRecord')
     FLAGS = flags.FLAGS
 
-    tf.app.run()
+    with tf.device('/device:GPU:0'):
+    	tf.app.run()
